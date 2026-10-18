@@ -1,0 +1,91 @@
+:root {
+  --blue: #3dafee;
+  --purple: #7450a7;
+  --green: #a4e155;
+  --yellow: #f9e924;
+  --red: #e72d5e;
+  --black: #49494b;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 48px); /* 8 = BOARD_LENGTH */
+  gap: 0px;
+  border-radius: 0;
+}
+
+/*Tiles*/
+.tile {
+  border: none;
+  aspect-ratio: 1 / 1;
+}
+
+.display-tile {
+  border: none;
+  width: 48px;
+  height: 48px;
+}
+
+.choice-tile {
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+  width: 48px;
+  height: 48px;
+}
+
+.choice-tile:hover {
+  transform: scale(1.05);
+}
+
+.impossible-choice-tile {
+  pointer-events: none;
+  margin: 0.2rem;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+/* Color the tiles*/
+.blue {
+  background-color: var(--blue);
+}
+
+.black {
+  background-color: var(--black);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.purple {
+  background-color: var(--purple);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+/*Other sections*/
+.hidden {
+  display: none;
+}
+
+#choiceDiv {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;  /* centers the row under the board */
+  align-items: center;      /* vertically centers small tiles with big ones */
+}
+
