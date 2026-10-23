@@ -13,6 +13,25 @@
   align-items: center;
 }
 
+.player-turn {
+  margin: 0 0 1rem;
+  padding: 0.45rem 1rem;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  box-shadow: 0 3px 0 currentColor;
+  font-weight: 800;
+}
+
+.player-one {
+  color: #c74750;
+  background: #fff0ef;
+}
+
+.player-two {
+  color: #247e8c;
+  background: #effafb;
+}
+
 .board {
   display: grid;
   grid-template-columns: repeat(8, 48px); /* 8 = BOARD_LENGTH */

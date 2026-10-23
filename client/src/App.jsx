@@ -24,7 +24,7 @@ function App() {
     return 'choice-tile';
   }
 
-  var multiHeader = (turn) ? <p>Player 1</p> : <p>Player 2</p>;
+  var multiHeader = (turn) ? <p className="player-turn player-one">Player 1</p> : <p className="player-turn player-two">Player 2</p>;
 
   return (
     <div className="app">
