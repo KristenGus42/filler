@@ -1,16 +1,37 @@
-# React + Vite
+# Color Filler
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Color Filler is a local, two-player territory game inspired by the color-grabbing gameplay of Filler in GamePigeon. Players share one screen and take turns expanding their regions across a randomly generated board.
 
-Currently, two official plugins are available:
+## How to Play
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Each player starts in an opposite corner of the 7-by-8 board.
+- On your turn, choose one of the available colors to change your region's color and absorb neighboring tiles of that color.
+- You cannot choose either player's current color, so each move is a choice between growing your region and limiting your opponent's options.
+- The board uses six colors, with at least eight tiles of each color and no matching colors adjacent at the start.
 
-## React Compiler
+The goal is to claim as much of the board as possible. The game is currently designed for local play on one device.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run Locally
 
-## Expanding the ESLint configuration
+You need Node.js and npm installed. Vite is included as a project dependency, so there is no need to install it globally.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+From the `client` directory, install the dependencies and start the development server:
+
+```sh
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite in your browser. To stop the server, press `Ctrl+C` in the terminal.
+
+Other available commands:
+
+```sh
+npm run build  # Create a production build in dist/
+npm run lint   # Run ESLint
+```
+
+## Future Plans
+
+- Online multiplayer so players can compete from separate devices.
+- A fully functional bot opponent for solo play.
